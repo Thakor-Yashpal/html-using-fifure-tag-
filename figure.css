@@ -1,0 +1,17 @@
+body {
+    background-color: blanchedalmond;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+figure {
+    margin-left: auto;
+}
+
+pre {
+    margin-left: 40%;
+}
+
+#cow-caption {
+    text-align: center;
+}
