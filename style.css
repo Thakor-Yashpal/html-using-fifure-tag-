@@ -1,0 +1,355 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+}
+/* Some Varibales */
+:root {
+  --text-color: #021f2a;
+  --bg-color: #fff;
+}
+/* Custom Scroll Bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+  border-radius: 5rem;
+}
+section {
+  padding: 50px 100px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  transition: 0.5s;
+}
+header.shadow {
+  background: var(--bg-color);
+  box-shadow: 0 0 4px rgb(14 55 54 / 15%);
+}
+header.shadow .logo {
+  color: var(--text-color);
+}
+header.shadow .navbar a {
+  color: var(--text-color);
+}
+header.shadow .navbar a::after {
+  background: var(--text-color);
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+.navbar {
+  display: flex;
+  column-gap: 5rem;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bg-color);
+}
+.navbar a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--bg-color);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.4s;
+}
+.navbar a:hover::after,
+.navbar .home-active::after {
+  width: 100%;
+}
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100001;
+  display: none;
+}
+.container {
+  width: 100%;
+  min-height: 640px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.swiper-pagination-bullet {
+  padding: 5px;
+}
+.swiper-pagination-bullet-active {
+  background: var(--bg-color) !important;
+}
+.home-text {
+  z-index: 100001;
+  padding: 0 100px;
+}
+.home-text span {
+  color: var(--bg-color);
+  font-weight: 400;
+}
+.home-text h1 {
+  color: var(--bg-color);
+  font-size: 3.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.btn {
+  padding: 0.7rem 1rem;
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-weight: 500;
+}
+.btn:hover {
+  background: #01151d;
+}
+.heading {
+  text-align: center;
+}
+.heading h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+.places-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.places-container .box {
+  position: relative;
+}
+.place-img {
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+}
+.place-img img {
+  width: 100%;
+  height: 100%;
+}
+.place-img img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.place-text {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+.place-text h2 {
+  color: var(--bg-color);
+  font-weight: 400;
+  font-size: 1rem;
+}
+.place-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+.places-container .box:hover .place-icon {
+  background: #01151d;
+}
+.video-container {
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+.video-container video {
+  width: 768px;
+}
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.about-text h1 {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+.about-text p {
+  font-size: 0.938rem;
+  text-align: justify;
+  margin: 0.5rem 0 1.7rem;
+}
+.about-img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.about-img img {
+  height: 100%;
+  width: 100%;
+}
+.about-img img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  gap: 1rem;
+  color: var(--text-color);
+}
+.footer-box h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.footer-box p {
+  font-size: 00.938rem;
+  margin-bottom: 10px;
+}
+.social {
+  display: flex;
+  align-items: center;
+}
+.social a {
+  font-size: 24px;
+  color: var(--text-color);
+  margin-right: 1rem;
+}
+.footer-box h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.footer-box li a {
+  color: var(--text-color);
+}
+.copyright {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-color);
+}
+/* Making Responsive */
+@media (max-width: 991px) {
+  header {
+    padding: 18px 4%;
+  }
+  section {
+    padding: 50px 4%;
+  }
+  .home-text {
+    padding: 0 4%;
+  }
+}
+@media (max-width: 881px) {
+  .home-text h1 {
+    font-size: 3rem;
+  }
+  .video-container video {
+    width: 568px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 12px 4%;
+  }
+  #menu-icon {
+    color: var(--bg-color);
+    display: initial;
+  }
+  header.shadow #menu-icon {
+    color: var(--text-color);
+  }
+  header .navbar {
+    position: absolute;
+    width: 240px;
+    height: 100vh;
+    top: 100%;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    row-gap: 1.4rem;
+    padding: 20px;
+    box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+    transition: 0.2s ease;
+    text-align: left;
+  }
+  .navbar a {
+    color: var(--text-color);
+  }
+  .navbar a::after {
+    display: none;
+  }
+  .navbar.active {
+    right: 0;
+  }
+  .home-text h1 {
+    font-size: 2.4rem;
+  }
+  .about-text p br {
+    display: contents;
+  }
+  .heading h1,
+  .about-text h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 662px) {
+  .video-container video {
+    width: 100%;
+  }
+}
+@media (max-width: 452px) {
+  .container {
+    min-height: 554px;
+  }
+  .home-text h1 {
+    font-size: 1.7rem;
+  }
+  .container img {
+    object-position: left;
+  }
+  .heading h1,
+  .about-text h1 {
+    font-size: 1.2rem;
+  }
+  .about-text {
+    text-align: center;
+  }
+}
